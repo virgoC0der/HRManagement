@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+    background: skyblue;
+    text-align: center;
+    /*水平居中*/
+    line-height: 200px;
+    /*垂直居中   行高(line-height)需与该div的高度值(height)一致*/
+    overflow: hidden;
+    /*防止内容超出容器或产生自动换行*/
+  }
+
+  #form {
+    float: left;
+    font-family: PingFangSC-Regular;
+    letter-spacing: 0.32px;
+    font-size: 19px;
+    box-sizing: border-box;
+    margin-top: 0px;
+    padding-left: 50px;
+    width: 100%;
+    float: left;
+    color: #2A4960;
+  }
+
+  input {
+    font-size: 17px;
+    padding: 2px 7px;
+    margin-top: 4px;
+    margin-bottom: 5px;
+  }
+
+  select {
+    font-size: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  textarea {
+    width: 100px;
+    height: 30px;
+    padding: 5px 5px;
+    /*
+      float: left;
+      clear: both;
+*/
+  }
+
+  .smallInput {
+    width: 70px;
+  }
+
+  textarea {
+    resize: none;
+    font-size: 14px;
+    width: 360px;
+    height: 40px;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  #submit {
+    cursor: pointer;
+    /*      float: right;*/
+    position: fixed;
+    top: 390px;
+    left: 980px;
+    margin-top: 6px;
+    margin-bottom: 27px;
+    padding: 6px 22px;
+    font-weight: 400;
+    text-align: center width: 40px;
+    height: 20px;
+    color: white;
+    background-color: #2A4960;
+    border-bottom: 3px solid #2A4980;
+    /*      border-radius: 9px;*/
+  }
+</style>
+
+<body>
+  <form id="form">
+    员工号: <input type="text" />
+    <input type="submit" value="查询信息" />
+    <br>
+    <!--
+   职位: 
+				<select name="Post" id="second-option">
+				<option value="饲养员">饲养员</option>
+				<option value="财务员">财务员</option>
+				<option value="后勤人员">后勤人员</option>
+				<option value="百头猪场场长">百头猪场场长</option>
+				</select>
+				<br>
+  所在部门: 
+                <select name="Department" id="first-option" onChange="change()">
+				<option value="养猪场">养猪场</option>
+				<option value="养鸡场">养鸡场</option>
+				<option value="鱼塘">鱼塘</option>
+				<option value="厕所">厕所</option>
+				</select>
+				
+				<br>
+-->
+    调往部门:
+    <select id="newDepartment">
+				<option value="养猪场">养猪场</option>
+				<option value="养鸡场">养鸡场</option>
+				<option value="鱼塘">鱼塘</option>
+				<option value="厕所">厕所</option>
+				</select>
+    <br>
+
+  </form>
+  <div id="submit">提交</div>
+  <script src="StaffManagement/jquery.js">
+  </script>
+  <script>
+    $(document).ready(function() {
+      $("#submit").bind("click", clickSendButton)
+    })
+
+    function clickSendButton() {
+      alert("submit")
+      $("#form").submit()
+    }
+
+    function change() {
+      var x = document.getElementById("first-option");
+      var y = document.getElementById("second-option");
+      y.options.length = 0; // 清除second下拉框的所有内容
+      if (x.selectedIndex == 0) {
+        y.options.add(new Option("饲养员", "0"));
+        y.options.add(new Option("财务员", "1"));
+        y.options.add(new Option("后勤人员", "2"));
+        y.options.add(new Option("百头猪场场长", "3"));
+      }
+
+      if (x.selectedIndex == 1) {
+        y.options.add(new Option("饲养员", "0"));
+        y.options.add(new Option("鸡舍舍长", "1"));
+        y.options.add(new Option("后勤人员", "2"));
+        y.options.add(new Option("万头鸡场场长", "3"));
+      }
+
+      if (x.selectedIndex == 2) {
+        y.options.add(new Option("饲养员", "0"));
+        y.options.add(new Option("采购员", "1"));
+        y.options.add(new Option("后勤人员", "2"));
+        y.options.add(new Option("鱼塘塘主", "3"));
+      }
+
+      if (x.selectedIndex == 3) {
+        y.options.add(new Option("保洁员", "0"));
+        y.options.add(new Option("保洁长", "1"));
+        y.options.add(new Option("采购员", "2"));
+        y.options.add(new Option("厕所所长", "3"));
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>

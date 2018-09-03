@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>人力资源管理登录</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    
+<style>
+      
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  background: url("image/backgroundpic.jpg")  fixed;
+  background-size: cover;
+}
+</style>
+
+
+  </head>
+
+
+
+  <body>
+
+    <div class="wrapper">
+  <form class="login" action="/LoginServlet" method="get">
+    <p class="title">人力资源管理</p>
+    <input name="username" type="text" placeholder="Username" autofocus/>
+    <i class="fa fa-user"></i>
+    <input name="userpass" type="password" placeholder="Password" />
+    <i class="fa fa-key"></i>
+    <!--<a href="#">Forgot your password?</a>-->
+    <button>
+      <i class="spinner"></i>
+      <span class="state">Log in</span>
+    </button>
+  </form>
+  </p>
+</div>
+
+    
+    
+    
+  </body>
+</html>

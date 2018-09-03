@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <display-name>EHR_</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <context-param>
+        <param-name>server</param-name>
+        <param-value>localhost</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbname</param-name>
+        <param-value>EHR</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbuser</param-name>
+        <param-value>csx</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbpwd</param-name>
+        <param-value>19720226csx</param-value>
+    </context-param>
+    <servlet>
+        <display-name>AddStaffServlet</display-name>
+        <servlet-name>AddStaffServlet</servlet-name>
+        <servlet-class>com.ehr_.servlet.AddStaffServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>LoginServlet</display-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.ehr_.servlet.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <display-name>PostImport</display-name>
+        <servlet-name>PostImport</servlet-name>
+        <servlet-class>com.ehr_.servlet.PostImport</servlet-class>
+    </servlet>
+
+    <servlet>
+        <display-name>PostImportSubmit</display-name>
+        <servlet-name>PostImportSubmit</servlet-name>
+        <servlet-class>com.ehr_.servlet.PostImportSubmit</servlet-class>
+    </servlet>
+
+    <servlet>
+        <display-name>DepartmentImport</display-name>
+        <servlet-name>DepartmentImport</servlet-name>
+        <servlet-class>com.ehr_.servlet.DepartmentImport</servlet-class>
+    </servlet>
+
+    <servlet>
+        <display-name>DepartmentImportSubmit</display-name>
+        <servlet-name>DepartmentImportSubmit</servlet-name>
+        <servlet-class>com.ehr_.servlet.DepartmentImportSubmit</servlet-class>
+    </servlet>
+
+    <servlet>
+        <display-name>EmployManage</display-name>
+        <servlet-name>EmployManage</servlet-name>
+        <servlet-class>com.ehr_.servlet.EmployManage</servlet-class>
+    </servlet>
+
+    <servlet>
+        <display-name>EmployManageSubmit</display-name>
+        <servlet-name>EmployManageSubmit</servlet-name>
+        <servlet-class>com.ehr_.servlet.EmployManageSubmit</servlet-class>
+    </servlet>
+
+    <servlet>
+        <display-name>Queryinfo</display-name>
+        <servlet-name>Queryinfo</servlet-name>
+        <servlet-class>com.ehr_.servlet.Queryinfo</servlet-class>
+    </servlet>
+
+    <servlet>
+        <display-name>ExitManage</display-name>
+        <servlet-name>ExitManage</servlet-name>
+        <servlet-class>com.ehr_.servlet.ExitManage</servlet-class>
+    </servlet>
+
+    <servlet>
+        <display-name>ExitManageSubmit</display-name>
+        <servlet-name>ExitManageSubmit</servlet-name>
+        <servlet-class>com.ehr_.servlet.ExitManageSubmit</servlet-class>
+    </servlet>
+
+    <servlet>
+        <display-name>QueryList</display-name>
+        <servlet-name>QueryList</servlet-name>
+        <servlet-class>com.ehr_.servlet.QueryList</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddStaffServlet</servlet-name>
+        <url-pattern>/AddStaffServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PostImport</servlet-name>
+        <url-pattern>/PostImport</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet-mapping>
+        <servlet-name>PostImportSubmit</servlet-name>
+        <url-pattern>/PostImportSubmit</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DepartmentImport</servlet-name>
+        <url-pattern>/DepartmentImport</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DepartmentImportSubmit</servlet-name>
+        <url-pattern>/DepartmentImportSubmit</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EmployManage</servlet-name>
+        <url-pattern>/EmployManage</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EmployManageSubmit</servlet-name>
+        <url-pattern>/EmployManageSubmit</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Queryinfo</servlet-name>
+        <url-pattern>/Queryinfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>OutputStaffInfo</servlet-name>
+        <url-pattern>/OutputStaffInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>OutputStaffInfo</display-name>
+        <servlet-name>OutputStaffInfo</servlet-name>
+        <servlet-class>com.ehr_.servlet.OutputStaffInfo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ExitManage</servlet-name>
+        <url-pattern>/ExitManage</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ExitManageSubmit</servlet-name>
+        <url-pattern>/ExitManageSubmit</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>QueryList</servlet-name>
+        <url-pattern>/QueryList</url-pattern>
+    </servlet-mapping>
+
+</web-app>

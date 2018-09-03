@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="EHR_:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/EHR__war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="EHR_/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="EHR_" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.46" />
+          <element id="library" level="project" name="junit-4.10" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
